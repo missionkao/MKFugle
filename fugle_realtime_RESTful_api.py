@@ -37,10 +37,10 @@ class chart_api():
         # now = datetime.datetime.now() + relativedelta(weekday=FR(-1))
         now = datetime.datetime.now()
         today = now.strftime('%Y-%m-%d')
-        close_time = datetime.datetime(now.year,now.month,now.day, 10, 30)
+        close_time = datetime.datetime(now.year,now.month,now.day, 12, 00)
 
         time_index = pd.date_range(start=f'{today} 09:00:00',
-                                   end=f'{today} 10:30:00', freq=f'{n}T', closed='right')
+                                   end=f'{today} 12:00:00', freq=f'{n}T', closed='right')
 
         df_time = pd.DataFrame(time_index, columns=['at'])
 
